@@ -1,9 +1,9 @@
-import { useEffect, useState } from 'react'
+import React from 'react'
 import BackToHomeBtn from '../../../components/backToHomeBtn';
 
-const useEffectFunc = () => {
-    const [count, setCount] = useState(0);
-    useEffect(() => {
+const useEffect = () => {
+    const [count, setCount] = React.useState(0);
+    React.useEffect(() => {
         document.title = "useEffect - Count: " + count;
     }, [count]);
     return (
@@ -17,4 +17,4 @@ const useEffectFunc = () => {
     )
 }
 
-export default useEffectFunc
+export default useEffect

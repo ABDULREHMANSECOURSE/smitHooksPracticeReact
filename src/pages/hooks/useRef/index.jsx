@@ -1,13 +1,13 @@
 import React from 'react'
 import BackToHomeBtn from '../../../components/backToHomeBtn'
 
-const UseReducer = () => {
+function UseRef() {
   return (
     <>
-      <BackToHomeBtn />
-      <h2>This is the useReducer Page</h2>
+        <BackToHomeBtn/>
+        <h2>This is the useRef Page</h2>
     </>
   )
 }
 
-export default UseReducer
+export default UseRef
