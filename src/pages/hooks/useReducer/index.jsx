@@ -2,17 +2,18 @@ import React from 'react'
 import BackToHomeBtn from '../../../components/backToHomeBtn'
 
 const UseReducer = () => {
-  function UseReducer(count, setCount) {
-    switch (setCount.type) {
+  document.title = "useReducer"
+  function setCountFunc(state, action) {
+    switch (action.type) {
       case "increment":
-        return count + 1
+        return state + 1
       case "decrement":
-        return count - 1
+        return state - 1
       default:
-        return count
+        return state
     }
   }
-  const [count, setCount] = React.useReducer(UseReducer, 0)
+  const [count, setCount] = React.useReducer(setCountFunc, 0)
   return (
     <>
       <BackToHomeBtn />
