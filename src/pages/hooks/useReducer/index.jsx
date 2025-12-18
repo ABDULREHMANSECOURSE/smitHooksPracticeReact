@@ -3,7 +3,7 @@ import BackToHomeBtn from '../../../components/backToHomeBtn'
 
 const UseReducer = () => {
   document.title = "useReducer"
-  function setCountFunc(state, action) {
+  function setCount(state, action) {
     switch (action.type) {
       case "increment":
         return state + 1
@@ -13,14 +13,14 @@ const UseReducer = () => {
         return state
     }
   }
-  const [count, setCount] = React.useReducer(setCountFunc, 0)
+  const [count, dispatch] = React.useReducer(setCount, 0)
   return (
     <>
       <BackToHomeBtn />
       <h2>This is the useReducer Page</h2>
-      <button onClick={() => setCount({type: "increment"})}>+</button>
+      <button onClick={() => dispatch({type: "increment"})}>+</button>
       <h3>Count: {count}</h3>
-      <button onClick={() => setCount({type:"decrement"})}>-</button>
+      <button onClick={() => dispatch({type:"decrement"})}>-</button>
     </>
   )
 }
