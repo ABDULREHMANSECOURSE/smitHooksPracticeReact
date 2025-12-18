@@ -1,8 +1,12 @@
 import React from 'react'
+import BackToHomeBtn from '../../components/backToHomeBtn'
 
 const UseState = () => {
   return (
-    <div>UseState</div>
+    <>
+        <h2>This is the useState Page</h2>
+        <BackToHomeBtn />
+    </>
   )
 }
 
