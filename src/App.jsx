@@ -1,6 +1,7 @@
 import React from 'react';
 import Home from './pages/home';
-import UseState from './pages/useState';
+import UseState from './pages/hooks/useState';
+import UseEffect from './pages/hooks/useEffect';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/useState" element={<UseState />} />
+          <Route path='/useEffect' element={<UseEffect />} />
         </Routes>
       </BrowserRouter>
     </>

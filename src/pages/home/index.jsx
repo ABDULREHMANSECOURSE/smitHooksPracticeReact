@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom'
 
 const Home = () => {
   const Navigate = useNavigate();
+  document.title = "Hooks Practice";
   return (
     <>
         <h2>Welcome to the Home Page</h2>
