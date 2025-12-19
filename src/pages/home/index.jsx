@@ -10,6 +10,7 @@ const Home = () => {
         <button onClick={() => Navigate('/useState')}>useState</button>
         <button onClick={() => Navigate('/useEffect')}>useEffect</button>
         <button onClick={() => Navigate('/useReducer')}>useReducer</button>
+        <button onClick={() => Navigate('/useContext')}>useContext</button>
         <button onClick={() => Navigate('/useMemo')}>useMemo</button>
         <button onClick={() => Navigate('/useRef')}>useRef</button>
     </>
