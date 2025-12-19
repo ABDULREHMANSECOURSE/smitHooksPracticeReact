@@ -1,15 +1,9 @@
-import React, { useContext } from "react";
-import { counterContext } from "../../../components/context";
+import React from 'react'
 
-const UseContextFunc = () => {
-  const { count, setCount } = useContext(counterContext);
-
+const UseContext = () => {
   return (
-    <>
-      <h3>{count}</h3>
-      <button onClick={() => setCount(count + 1)}>+</button>
-    </>
-  );
-};
+    <div>UseContext</div>
+  )
+}
 
-export default UseContextFunc;
+export default UseContext
