@@ -1,4 +1,5 @@
 import React, { createContext, useState } from "react";
+import BackToHomeBtn from "../../../components/backToHomeBtn";
 
 // 1️⃣ Context create
 const CounterContext = createContext();
@@ -20,9 +21,10 @@ const CounterUI = () => {
 
   return (
     <>
+      <BackToHomeBtn />
       <h3>Count: {count}</h3>
-      <button onClick={() => setCount(count + 1)}>+</button>
-      <button onClick={() => setCount(count - 1)}>-</button>
+      <button onClick={() => setCount(count + 1)}>Increment</button>
+      <button onClick={() => setCount(count - 1)}>Decrement</button>
     </>
   );
 };
