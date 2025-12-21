@@ -20,7 +20,7 @@ const UseReducer = () => {
       <h2>This is the useReducer Page</h2>
       <button onClick={() => dispatch({type: "increment"})}>Increment</button>
       <h3>Count: {count}</h3>
-      <button onClick={() => dispatch({type:"decrement"})}>Decrement</button>
+      <button onClick={() => dispatch({type: "decrement"})}>Decrement</button>
     </>
   )
 }
