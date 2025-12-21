@@ -1,9 +1,3 @@
-import React from 'react'
+import { createContext } from "react";
+const CounterContext = createContext()
 
-const UseContext = () => {
-  return (
-    <div>UseContext</div>
-  )
-}
-
-export default UseContext
