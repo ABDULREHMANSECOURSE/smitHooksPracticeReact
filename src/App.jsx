@@ -1,31 +1,32 @@
-import React from 'react';
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from "./pages/home";
+import UseState from "./pages/hooks/useState";
+import UseEffect from "./pages/hooks/useEffect";
+import UseReducer from "./pages/hooks/useReducer";
+import UseRef from "./pages/hooks/useRef";
+import UseMemo from "./pages/hooks/useMemo";
+import UseContext from "./pages/hooks/useContext";
 
-import Home from './pages/home';
-
-import UseState from './pages/hooks/useState';
-import UseEffect from './pages/hooks/useEffect';
-import UseReducer from './pages/hooks/useReducer';
-import UseRef from './pages/hooks/useRef';
-import UseMemo from './pages/hooks/useMemo';
-import UseContext from './pages/hooks/useContext';
+import CounterProvider from "./components/context/CounterContext";
 
 function App() {
   return (
-    <>
-      <BrowserRouter>
+    <BrowserRouter>
+      <CounterProvider>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/useState" element={<UseState />} />
-          <Route path='/useEffect' element={<UseEffect />} />
-          <Route path='/useReducer' element={<UseReducer />} />
-          <Route path='/useMemo' element={<UseMemo />} />
-          <Route path='/useRef' element={<UseRef />} />
-          <Route path='/useContext' element={<UseContext />} />
+          <Route path="/useEffect" element={<UseEffect />} />
+          <Route path="/useReducer" element={<UseReducer />} />
+          <Route path="/useMemo" element={<UseMemo />} />
+          <Route path="/useRef" element={<UseRef />} />
+          <Route path="/useContext" element={<UseContext />} />
         </Routes>
-      </BrowserRouter>
-    </>
+      </CounterProvider>
+    </BrowserRouter>
   );
 }
+
 export default App;
